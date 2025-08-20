@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sponsor Packages - Naija5Fest</title>
+    <meta name="description" content="Sponsorship opportunities and packages for Naija5Fest football tournaments">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .content-page {
+            padding: 2rem 0;
+            margin-top: 80px;
+        }
+        
+        .content-container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .content-container h1 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--accent-color);
+        }
+        
+        .content-container h2 {
+            color: var(--primary-color);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .content-container h3 {
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+        
+        .content-container p {
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+        
+        .content-container ul, .content-container ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+        
+        .content-container ul li, .content-container ol li {
+            margin-bottom: 0.5rem;
+            line-height: 1.7;
+        }
+        
+        .content-date {
+            font-style: italic;
+            color: #777;
+            margin-top: 2rem;
+        }
+        
+        .back-to-home {
+            display: inline-block;
+            margin-top: 1rem;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        
+        .back-to-home:hover {
+            color: var(--accent-color);
+        }
+        
+        .package-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .package-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .package-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .package-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        
+        .package-header h3 {
+            margin: 0;
+            color: white;
+        }
+        
+        .package-price {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin: 0.5rem 0;
+        }
+        
+        .package-body {
+            padding: 1.5rem;
+        }
+        
+        .package-features {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 1.5rem 0;
+        }
+        
+        .package-features li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .package-features li:last-child {
+            border-bottom: none;
+        }
+        
+        .package-features li::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            color: var(--primary-color);
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+        }
+        
+        .package-cta {
+            text-align: center;
+        }
+        
+        .premium-package {
+            transform: scale(1.05);
+        }
+        
+        .premium-package .package-header {
+            background-color: var(--accent-color);
+        }
+        
+        .premium-badge {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background-color: var(--sponsor-highlight);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.8rem;
+            transform: rotate(15deg);
+        }
+        
+        .benefit-box {
+            background-color: #f9f9f9;
+            border-left: 4px solid var(--primary-color);
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .benefit-box h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .testimonial {
+            background-color: #f5f5f5;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            position: relative;
+        }
+        
+        .testimonial::before {
+            content: '\201C';
+            font-size: 4rem;
+            color: var(--primary-color);
+            opacity: 0.2;
+            position: absolute;
+            top: -10px;
+            left: 10px;
+        }
+        
+        .testimonial-content {
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+        
+        .testimonial-company {
+            color: #777;
+        }
+        
+        .contact-cta {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            padding: 2rem;
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        .contact-cta h3 {
+            margin-top: 0;
+        }
+        
+        @media (max-width: 992px) {
+            .package-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .premium-package {
+                grid-column: span 2;
+                transform: scale(1);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .package-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .premium-package {
+                grid-column: span 1;
+            }
+        }
+    </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">Naija<span>5</span>Fest</a>
+            <nav>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#tournament">Tournament</a></li>
+                    <li><a href="index.html#sponsors">Sponsors</a></li>
+                    <li><a href="index.html#registration">Register</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sponsor Packages Content -->
+    <section class="content-page">
+        <div class="container">
+            <div class="content-container">
+                <h1>Sponsor Packages</h1>
+                
+                <p>Last Updated: August 18, 2025</p>
+                
+                <p>Naija5Fest offers unique sponsorship opportunities that directly integrate your brand with our elite-tier football platform. Our innovative model combines grassroots competition with sponsor integration, creating powerful brand exposure and product adoption.</p>
+                
+                <div class="benefit-box">
+                    <h4>Why Sponsor Naija5Fest?</h4>
+                    <ul>
+                        <li>Direct product-to-registration linkage ensures actual product purchase and consumption</li>
+                        <li>Extensive brand visibility across 16 Nigerian states</li>
+                        <li>Engagement with football-loving audience across all socioeconomic levels</li>
+                        <li>Media coverage and social media amplification</li>
+                        <li>Association with grassroots sports development in Nigeria</li>
+                    </ul>
+                </div>
+                
+                <h2>Monthly Sponsorship Packages</h2>
+                
+                <div class="package-grid">
+                    <div class="package-card">
+                        <div class="package-header">
+                            <h3>Silver Package</h3>
+                            <div class="package-price">₦15,000,000</div>
+                            <p>Per Month</p>
+                        </div>
+                        <div class="package-body">
+                            <ul class="package-features">
+                                <li>Exclusive naming rights for 1 state qualifier</li>
+                                <li>Product integration in registration (minimum 500 units)</li>
+                                <li>Logo on tournament materials in sponsored state</li>
+                                <li>Social media mentions (10 dedicated posts)</li>
+                                <li>Banner placement at tournament venue</li>
+                                <li>Booth space at tournament venue</li>
+                                <li>Product sampling opportunities</li>
+                                <li>Access to tournament database (sponsored state only)</li>
+                            </ul>
+                            <div class="package-cta">
+                                <a href="index.html#contact" class="btn btn-primary">Contact Us</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="package-card premium-package">
+                        <div class="premium-badge">Most Popular</div>
+                        <div class="package-header">
+                            <h3>Gold Package</h3>
+                            <div class="package-price">₦35,000,000</div>
+                            <p>Per Month</p>
+                        </div>
+                        <div class="package-body">
+                            <ul class="package-features">
+                                <li>Exclusive naming rights for 1 month across all 16 states</li>
+                                <li>Product integration in registration (minimum 2,000 units)</li>
+                                <li>Logo on all tournament materials nationwide</li>
+                                <li>Branded jerseys for all participating teams</li>
+                                <li>Social media campaign (30 dedicated posts)</li>
+                                <li>Premium booth space at all tournament venues</li>
+                                <li>Product sampling and activation rights</li>
+                                <li>Access to complete tournament database</li>
+                                <li>Brand ambassador opportunities with winning teams</li>
+                                <li>Media interviews and press coverage</li>
+                                <li>30-second commercial during livestreams</li>
+                            </ul>
+                            <div class="package-cta">
+                                <a href="index.html#contact" class="btn btn-accent">Contact Us</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="package-card">
+                        <div class="package-header">
+                            <h3>Bronze Package</h3>
+                            <div class="package-price">₦8,000,000</div>
+                            <p>Per Month</p>
+                        </div>
+                        <div class="package-body">
+                            <ul class="package-features">
+                                <li>Co-sponsorship rights for 1 state qualifier</li>
+                                <li>Product integration in registration (minimum 250 units)</li>
+                                <li>Logo on tournament materials (secondary placement)</li>
+                                <li>Social media mentions (5 dedicated posts)</li>
+                                <li>Banner placement at tournament venue</li>
+                                <li>Product sampling opportunities</li>
+                            </ul>
+                            <div class="package-cta">
+                                <a href="index.html#contact" class="btn btn-primary">Contact Us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <h2>Year-End Championship Sponsorship</h2>
+                
+                <div class="package-grid">
+                    <div class="package-card">
+                        <div class="package-header">
+                            <h3>Platinum Package</h3>
+                            <div class="package-price">₦75,000,000</div>
+                            <p>Championship Title Sponsor</p>
+                        </div>
+                        <div class="package-body">
+                            <ul class="package-features">
+                                <li>Exclusive title sponsorship of the Year-End Championship</li>
+                                <li>Naming rights for the championship trophy</li>
+                                <li>Premium branding throughout the championship venue</li>
+                                <li>Logo on all championship jerseys and materials</li>
+                                <li>VIP hospitality area for corporate guests</li>
+                                <li>Presenting sponsor for live broadcast</li>
+                                <li>60-second commercial during broadcasts</li>
+                                <li>Executive speaking opportunity at opening ceremony</li>
+                                <li>Trophy presentation rights</li>
+                                <li>Comprehensive media campaign across TV, radio, print, and digital</li>
+                                <li>1-year brand ambassadorship with championship team</li>
+                                <li>First right of refusal for next year's championship</li>
+                            </ul>
+                            <div class="package-cta">
+                                <a href="index.html#contact" class="btn btn-accent">Contact Us</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="package-card">
+                        <div class="package-header">
+                            <h3>Diamond Package</h3>
+                            <div class="package-price">₦45,000,000</div>
+                            <p>Championship Co-Sponsor</p>
+                        </div>
+                        <div class="package-body">
+                            <ul class="package-features">
+                                <li>Co-sponsorship of the Year-End Championship</li>
+                                <li>Naming rights for one championship day</li>
+                                <li>Premium branding at championship venue</li>
+                                <li>Logo on championship materials (secondary placement)</li>
+                                <li>Hospitality area for corporate guests</li>
+                                <li>30-second commercial during broadcasts</li>
+                                <li>Medal presentation rights</li>
+                                <li>Media campaign across radio, print, and digital</li>
+                                <li>6-month brand ambassadorship with runner-up team</li>
+                            </ul>
+                            <div class="package-cta">
+                                <a href="index.html#contact" class="btn btn-primary">Contact Us</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="package-card">
+                        <div class="package-header">
+                            <h3>Category Packages</h3>
+                            <div class="package-price">₦15,000,000</div>
+                            <p>Category Exclusivity</p>
+                        </div>
+                        <div class="package-body">
+                            <ul class="package-features">
+                                <li>Category exclusivity for the championship</li>
+                                <li>Branding at championship venue</li>
+                                <li>Logo on championship materials (tertiary placement)</li>
+                                <li>Booth space at championship venue</li>
+                                <li>Product sampling opportunities</li>
+                                <li>15-second commercial during broadcasts</li>
+                                <li>Social media campaign (15 dedicated posts)</li>
+                                <li>Sponsorship of one award category</li>
+                            </ul>
+                            <div class="package-cta">
+                                <a href="index.html#contact" class="btn btn-primary">Contact Us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <h2>Additional Sponsorship Opportunities</h2>
+                
+                <h3>Custom Integration Packages</h3>
+                <p>We offer tailored sponsorship solutions designed to meet your specific marketing objectives and budget. Our team can create custom packages that focus on:</p>
+                
+                <ul>
+                    <li><strong>Digital Integration:</strong> Social media campaigns, website features, app integration</li>
+                    <li><strong>Content Creation:</strong> Branded content, highlight videos, player profiles</li>
+                    <li><strong>Experiential Marketing:</strong> Fan engagement activities, product demonstrations</li>
+                    <li><strong>Community Outreach:</strong> CSR initiatives, youth development programs</li>
+                    <li><strong>Talent Endorsements:</strong> Player ambassadorships, team sponsorships</li>
+                </ul>
+                
+                <h3>Multi-Year Partnerships</h3>
+                <p>For sponsors looking for long-term association with Naija5Fest, we offer multi-year partnership agreements with significant benefits:</p>
+                
+                <ul>
+                    <li>Discounted rates (up to 20% for 3-year commitments)</li>
+                    <li>First right of refusal for premium sponsorship opportunities</li>
+                    <li>Guaranteed category exclusivity</li>
+                    <li>Integrated long-term marketing campaigns</li>
+                    <li>Co-branded merchandise opportunities</li>
+                    <li>Custom content series and documentary features</li>
+                </ul>
+                
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"Partnering with Naija5Fest has been a game-changer for our brand. The direct product integration with registration ensured actual product purchase, and the brand visibility across 16 states significantly boosted our market penetration. The ROI has exceeded our expectations."</p>
+                    </div>
+                    <div class="testimonial-author">Oluwaseun Adebayo</div>
+                    <div class="testimonial-company">Marketing Director, Rehau's Raha Cola</div>
+                </div>
+                
+                <h2>Sponsorship Benefits</h2>
+                
+                <h3>Brand Exposure</h3>
+                <ul>
+                    <li>Reach over 500,000 direct participants and spectators across 16 states</li>
+                    <li>Media coverage reaching an estimated 15 million Nigerians</li>
+                    <li>Social media engagement with over 2 million football enthusiasts</li>
+                    <li>Brand visibility in high-traffic tournament venues</li>
+                    <li>Product placement in registration process and tournament activities</li>
+                </ul>
+                
+                <h3>Product Integration</h3>
+                <ul>
+                    <li>Direct product-to-registration linkage ensures actual product purchase</li>
+                    <li>Guaranteed minimum product sales through registration requirements</li>
+                    <li>Product sampling opportunities to thousands of participants and spectators</li>
+                    <li>Product showcase in tournament environment</li>
+                    <li>Brand association with positive, high-energy sporting events</li>
+                </ul>
+                
+                <h3>Community Engagement</h3>
+                <ul>
+                    <li>Support grassroots football development in Nigeria</li>
+                    <li>Connect with local communities across 16 states</li>
+                    <li>Contribute to youth sports and talent development</li>
+                    <li>Create positive brand associations through community involvement</li>
+                    <li>Demonstrate corporate social responsibility</li>
+                </ul>
+                
+                <div class="contact-cta">
+                    <h3>Ready to Become a Naija5Fest Sponsor?</h3>
+                    <p>Contact our sponsorship team to discuss how we can create a customized package that meets your marketing objectives and budget.</p>
+                    <a href="index.html#contact" class="btn btn-cta">Contact Us Today</a>
+                </div>
+                
+                <p class="content-date">Last Updated: August 18, 2025</p>
+                
+                <a href="index.html" class="back-to-home"><i class="fas fa-arrow-left"></i> Back to Home</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-about">
+                    <div class="footer-logo">Naija<span>5</span>Fest</div>
+                    <p>Naija5Fest is Nigeria's premier football tournament combining grassroots competition with sponsor integration, creating opportunities for young talents across the nation.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#tournament">Tournament</a></li>
+                        <li><a href="index.html#sponsors">Sponsors</a></li>
+                        <li><a href="index.html#registration">Register</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3 class="footer-heading">Resources</h3>
+                    <ul>
+                        <li><a href="tournament-rules.html">Tournament Rules</a></li>
+                        <li><a href="player-eligibility.html">Player Eligibility</a></li>
+                        <li><a href="sponsor-packages.html">Sponsor Packages</a></li>
+                        <li><a href="media-kit.html">Media Kit</a></li>
+                        <li><a href="faqs.html">FAQs</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3 class="footer-heading">Legal</h3>
+                    <ul>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h3 class="footer-heading">Newsletter</h3>
+                    <p>Subscribe to our newsletter for the latest updates and offers.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit" class="btn btn-accent">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Naija5Fest. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

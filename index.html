@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naija5Fest - Elite-tier Football Platform</title>
+    <meta name="description" content="Naija5Fest - Elite-tier football platform combining grassroots competition with sponsor integration">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">Naija<span>5</span>Fest</a>
+            <nav>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#tournament">Tournament</a></li>
+                    <li><a href="#sponsors">Sponsors</a></li>
+                    <li><a href="#registration">Register</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <video class="hero-video" autoplay muted loop>
+            <source src="videos/football-highlights.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Naija5Fest</h1>
+            <h2 class="hero-subtitle">January Qualifiers: Register with Rehau's Raha Cola!</h2>
+            <a href="#registration" class="btn btn-cta">Register Now</a>
+        </div>
+    </section>
+
+    <!-- Tournament section anchor point -->
+    <div id="tournament"></div>
+
+    <!-- State Participation Map -->
+    <section class="state-map">
+        <div class="container">
+            <h2 class="text-center">State Participation Map</h2>
+            <p class="text-center">16 states competing for the ultimate football glory</p>
+            
+            <div class="map-container">
+                <div id="nigeria-map" class="map-svg">
+                    <!-- Nigeria SVG Map will be loaded here via JavaScript -->
+                </div>
+                <div class="state-tooltip" id="state-tooltip">
+                    <h4 id="tooltip-state">State Name</h4>
+                    <p>Status: <span id="tooltip-status">Active</span></p>
+                    <p>Teams Registered: <span id="tooltip-teams">15</span></p>
+                    <p><span id="tooltip-slots" class="slots-remaining">17 slots remaining</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sponsor Rotator -->
+    <section class="sponsor-rotator" id="sponsors">
+        <div class="container">
+            <h2 class="text-center">Our Sponsors</h2>
+            <p class="text-center">Proud partners of Naija5Fest</p>
+            
+            <div class="sponsor-slider">
+                <div class="sponsor-item">
+                    <img src="images/sponsors/rehau-logo.png" alt="Rehau's Raha Cola">
+                </div>
+                <div class="sponsor-item">
+                    <img src="images/sponsors/fumman-logo.png" alt="Fumman Drinks">
+                </div>
+                <div class="sponsor-item">
+                    <img src="images/sponsors/swan-logo.png" alt="SWAN Water">
+                </div>
+                <div class="sponsor-item">
+                    <img src="images/sponsors/grand-oak-logo.png" alt="Grand Oak">
+                </div>
+                <div class="sponsor-item">
+                    <img src="images/sponsors/delly-logo.png" alt="Delly Foods">
+                </div>
+                <div class="sponsor-item">
+                    <img src="images/sponsors/fearless-logo.png" alt="Fearless Energy Drink">
+                </div>
+                <!-- Duplicate for infinite scroll effect -->
+                <div class="sponsor-item">
+                    <img src="images/sponsors/rehau-logo.png" alt="Rehau's Raha Cola">
+                </div>
+                <div class="sponsor-item">
+                    <img src="images/sponsors/fumman-logo.png" alt="Fumman Drinks">
+                </div>
+                <div class="sponsor-item">
+                    <img src="images/sponsors/swan-logo.png" alt="SWAN Water">
+                </div>
+                <div class="sponsor-item">
+                    <img src="images/sponsors/grand-oak-logo.png" alt="Grand Oak">
+                </div>
+                <div class="sponsor-item">
+                    <img src="images/sponsors/delly-logo.png" alt="Delly Foods">
+                </div>
+                <div class="sponsor-item">
+                    <img src="images/sponsors/fearless-logo.png" alt="Fearless Energy Drink">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Section -->
+    <section class="registration" id="registration">
+        <div class="container">
+            <h2 class="text-center">Register Your Team</h2>
+            <p class="text-center">Join the most exciting football tournament in Nigeria</p>
+            
+            <div class="registration-container">
+                <div class="registration-header">
+                    <h3>Team Registration</h3>
+                </div>
+                
+                <div class="registration-steps">
+                    <div class="step active">
+                        <div class="step-number">1</div>
+                        <div class="step-label">Tournament Selection</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-label">Team Information</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-label">Payment</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-label">Confirmation</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">5</div>
+                        <div class="step-label">Future Registration</div>
+                    </div>
+                </div>
+                
+                <div class="registration-content">
+                    <!-- Step 1: Tournament Selection -->
+                    <div class="step-content active" id="step1">
+                        <h4>Select Tournament Month</h4>
+                        <div class="form-group">
+                            <label for="tournament-month">Tournament Month</label>
+                            <select id="tournament-month" class="form-control">
+                                <option value="january">January 2025 - Rehau's Raha Cola</option>
+                                <option value="february">February 2025 - Fumman Drinks</option>
+                                <option value="march">March 2025 - SWAN Water</option>
+                                <option value="april">April 2025 - Grand Oak (Captain Jack Rum)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="product-selection">
+                            <img src="images/sponsors/rehau-product.png" alt="Rehau's Raha Cola" class="product-image">
+                            <div class="product-info">
+                                <h4>Rehau's Raha Cola - 6 Pack</h4>
+                                <p>Required for January tournament registration</p>
+                                <p class="product-price">₦15,000 + ₦4,600 processing fee</p>
+                            </div>
+                        </div>
+                        
+                        <div class="registration-actions">
+                            <button class="btn btn-prev" disabled>Previous</button>
+                            <button class="btn btn-primary next-step">Next</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 2: Team Information -->
+                    <div class="step-content" id="step2">
+                        <h4>Team Information</h4>
+                        <div class="form-group">
+                            <label for="team-name">Team Name</label>
+                            <input type="text" id="team-name" class="form-control" placeholder="Enter your team name">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="team-state">State</label>
+                            <select id="team-state" class="form-control">
+                                <option value="">Select your state</option>
+                                <option value="lagos">Lagos</option>
+                                <option value="ogun">Ogun</option>
+                                <option value="osun">Osun</option>
+                                <option value="oyo">Oyo</option>
+                                <option value="ondo">Ondo</option>
+                                <option value="abuja">Abuja</option>
+                                <option value="kaduna">Kaduna</option>
+                                <option value="kwara">Kwara</option>
+                                <option value="anambra">Anambra</option>
+                                <option value="enugu">Enugu</option>
+                                <option value="rivers">Rivers</option>
+                                <option value="abia">Abia</option>
+                                <option value="delta">Delta</option>
+                                <option value="edo">Edo</option>
+                                <option value="plateau">Plateau</option>
+                                <option value="ekiti">Ekiti</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="captain-name">Captain's Name</label>
+                            <input type="text" id="captain-name" class="form-control" placeholder="Enter captain's full name">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="captain-phone">Captain's Phone</label>
+                            <input type="tel" id="captain-phone" class="form-control" placeholder="Enter captain's phone number">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="captain-email">Captain's Email</label>
+                            <input type="email" id="captain-email" class="form-control" placeholder="Enter captain's email address">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="team-logo">Team Logo (Optional)</label>
+                            <div class="file-upload-container">
+                                <input type="file" id="team-logo" class="file-upload">
+                                <label for="team-logo" class="file-upload-label">
+                                    <i class="fas fa-cloud-upload-alt"></i> Choose File
+                                </label>
+                                <span class="file-name">No file chosen</span>
+                            </div>
+                        </div>
+                        
+                        <div class="registration-actions">
+                            <button class="btn btn-prev prev-step">Previous</button>
+                            <button class="btn btn-primary next-step">Next</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 3: Payment Processing -->
+                    <div class="step-content" id="step3">
+                        <h4>Payment Information</h4>
+                        <div class="payment-summary">
+                            <h5>Order Summary</h5>
+                            <div class="summary-item">
+                                <span>Rehau's Raha Cola (6 Pack)</span>
+                                <span>₦15,000</span>
+                            </div>
+                            <div class="summary-item">
+                                <span>Processing Fee</span>
+                                <span>₦4,600</span>
+                            </div>
+                            <div class="summary-item total">
+                                <span>Total</span>
+                                <span>₦19,600</span>
+                            </div>
+                        </div>
+                        
+                        <div class="payment-form">
+                            <div class="form-group">
+                                <label for="card-name">Name on Card</label>
+                                <input type="text" id="card-name" class="form-control" placeholder="Enter name on card">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="card-number">Card Number</label>
+                                <input type="text" id="card-number" class="form-control" placeholder="1234 5678 9012 3456">
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group half">
+                                    <label for="card-expiry">Expiry Date</label>
+                                    <input type="text" id="card-expiry" class="form-control" placeholder="MM/YY">
+                                </div>
+                                
+                                <div class="form-group half">
+                                    <label for="card-cvv">CVV</label>
+                                    <input type="text" id="card-cvv" class="form-control" placeholder="123">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="registration-actions">
+                            <button class="btn btn-prev prev-step">Previous</button>
+                            <button class="btn btn-primary next-step">Complete Payment</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 4: Confirmation -->
+                    <div class="step-content" id="step4">
+                        <div class="confirmation-message">
+                            <i class="fas fa-check-circle"></i>
+                            <h4>Registration Successful!</h4>
+                            <p>Your team has been registered for the January 2025 tournament.</p>
+                            <p>A confirmation email has been sent to <span id="confirm-email">captain@example.com</span></p>
+                        </div>
+                        
+                        <div class="social-share">
+                            <h5>Share your registration</h5>
+                            <p>Let everyone know you're participating in Naija5Fest!</p>
+                            <div class="share-buttons">
+                                <a href="#" class="share-btn facebook">
+                                    <i class="fab fa-facebook-f"></i> Facebook
+                                </a>
+                                <a href="#" class="share-btn twitter">
+                                    <i class="fab fa-twitter"></i> Twitter
+                                </a>
+                                <a href="#" class="share-btn whatsapp">
+                                    <i class="fab fa-whatsapp"></i> WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="registration-actions">
+                            <button class="btn btn-prev prev-step">Previous</button>
+                            <button class="btn btn-primary next-step">Next</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 5: Future Registration -->
+                    <div class="step-content" id="step5">
+                        <h4>Register for Future Tournaments</h4>
+                        <p>Secure your spot in upcoming tournaments and get early bird discounts!</p>
+                        
+                        <div class="future-tournaments">
+                            <div class="tournament-option">
+                                <div class="tournament-checkbox">
+                                    <input type="checkbox" id="feb-tournament">
+                                    <label for="feb-tournament"></label>
+                                </div>
+                                <div class="tournament-details">
+                                    <h5>February 2025 - Fumman Drinks</h5>
+                                    <p>Early Bird Price: ₦18,000 (Save ₦1,600)</p>
+                                </div>
+                            </div>
+                            
+                            <div class="tournament-option">
+                                <div class="tournament-checkbox">
+                                    <input type="checkbox" id="mar-tournament">
+                                    <label for="mar-tournament"></label>
+                                </div>
+                                <div class="tournament-details">
+                                    <h5>March 2025 - SWAN Water</h5>
+                                    <p>Early Bird Price: ₦17,500 (Save ₦2,100)</p>
+                                </div>
+                            </div>
+                            
+                            <div class="tournament-option">
+                                <div class="tournament-checkbox">
+                                    <input type="checkbox" id="apr-tournament">
+                                    <label for="apr-tournament"></label>
+                                </div>
+                                <div class="tournament-details">
+                                    <h5>April 2025 - Grand Oak (Captain Jack Rum)</h5>
+                                    <p>Early Bird Price: ₦19,000 (Save ₦600)</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="registration-actions">
+                            <button class="btn btn-prev prev-step">Previous</button>
+                            <button class="btn btn-primary" id="complete-registration">Complete Registration</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tournament Structure -->
+    <section class="tournament-structure">
+        <div class="container">
+            <h2 class="text-center">Tournament Structure</h2>
+            <p class="text-center">From state qualifiers to the grand finale</p>
+            
+            <div class="structure-tabs">
+                <button class="tab-btn active" data-tab="monthly">Monthly Qualifiers</button>
+                <button class="tab-btn" data-tab="championship">Year-End Championship</button>
+            </div>
+            
+            <div class="tab-content active" id="monthly-tab">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>Monthly Qualifiers (16 States)</h3>
+                        <p>Each month, teams from 16 states compete in single-elimination knockout matches to determine the monthly champion.</p>
+                        
+                        <h4>Participating States</h4>
+                        <div class="states-grid">
+                            <span class="state-badge">Lagos</span>
+                            <span class="state-badge">Ogun</span>
+                            <span class="state-badge">Osun</span>
+                            <span class="state-badge">Oyo</span>
+                            <span class="state-badge">Ondo</span>
+                            <span class="state-badge">Abuja</span>
+                            <span class="state-badge">Kaduna</span>
+                            <span class="state-badge">Kwara</span>
+                            <span class="state-badge">Anambra</span>
+                            <span class="state-badge">Enugu</span>
+                            <span class="state-badge">Rivers</span>
+                            <span class="state-badge">Abia</span>
+                            <span class="state-badge">Delta</span>
+                            <span class="state-badge">Edo</span>
+                            <span class="state-badge">Plateau</span>
+                            <span class="state-badge">Ekiti</span>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="prize-card">
+                            <h4>Monthly Prizes</h4>
+                            <ul class="prize-list">
+                                <li>₦2,000,000 Cash Prize</li>
+                                <li>Team Jerseys for All Players</li>
+                                <li>Gold Medals</li>
+                                <li>Qualification for Lagos Grand Finale</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="championship-tab">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>Year-End Championship ("Kings of 5's")</h3>
+                        <p>The ultimate showdown featuring all 12 monthly winning teams competing for the grand prize and the title of "Kings of 5's".</p>
+                        
+                        <h4>Championship Format</h4>
+                        <p>The 12 monthly winners are divided into 4 groups of 3 teams each. After group stage matches, the top 2 teams from each group advance to the knockout stage.</p>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="prize-card">
+                            <h4>Championship Prizes</h4>
+                            <ul class="prize-list">
+                                <li>₦5,000,000 Grand Prize</li>
+                                <li>Championship Trophy</li>
+                                <li>1-Year Brand Ambassadorship</li>
+                                <li>Special Edition Championship Jerseys</li>
+                                <li>Media Coverage and Recognition</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sponsor Calendar -->
+    <section class="sponsor-calendar">
+        <div class="container">
+            <h2 class="text-center">Sponsor Calendar</h2>
+            <p class="text-center">Our proud sponsors throughout the year</p>
+            
+            <div class="calendar-grid">
+                <div class="calendar-item">
+                    <div class="calendar-header">
+                        <h4>January</h4>
+                    </div>
+                    <div class="calendar-body">
+                        <img src="images/sponsors/rehau-logo.png" alt="Rehau's Raha Cola">
+                        <h5>Rehau's Raha Cola</h5>
+                    </div>
+                </div>
+                
+                <div class="calendar-item">
+                    <div class="calendar-header">
+                        <h4>February</h4>
+                    </div>
+                    <div class="calendar-body">
+                        <img src="images/sponsors/fumman-logo.png" alt="Fumman Drinks">
+                        <h5>Fumman Drinks</h5>
+                    </div>
+                </div>
+                
+                <div class="calendar-item">
+                    <div class="calendar-header">
+                        <h4>March</h4>
+                    </div>
+                    <div class="calendar-body">
+                        <img src="images/sponsors/swan-logo.png" alt="SWAN Water">
+                        <h5>SWAN Natural Mineral Water</h5>
+                    </div>
+                </div>
+                
+                <div class="calendar-item">
+                    <div class="calendar-header">
+                        <h4>April</h4>
+                    </div>
+                    <div class="calendar-body">
+                        <img src="images/sponsors/grand-oak-logo.png" alt="Grand Oak">
+                        <h5>Grand Oak (Captain Jack Rum)</h5>
+                    </div>
+                </div>
+                
+                <div class="calendar-item">
+                    <div class="calendar-header">
+                        <h4>May</h4>
+                    </div>
+                    <div class="calendar-body">
+                        <img src="images/sponsors/delly-logo.png" alt="Delly Foods">
+                        <h5>Delly Foods (Delly Fruit Drink)</h5>
+                    </div>
+                </div>
+                
+                <div class="calendar-item">
+                    <div class="calendar-header">
+                        <h4>June</h4>
+                    </div>
+                    <div class="calendar-body">
+                        <img src="images/sponsors/fearless-logo.png" alt="Fearless Energy Drink">
+                        <h5>Fearless Energy Drink (Rite Foods)</h5>
+                    </div>
+                </div>
+                
+                <div class="calendar-item">
+                    <div class="calendar-header">
+                        <h4>July</h4>
+                    </div>
+                    <div class="calendar-body">
+                        <img src="images/sponsors/evaporated-logo.png" alt="Evaporated Water">
+                        <h5>Evaporated Water</h5>
+                    </div>
+                </div>
+                
+                <div class="calendar-item">
+                    <div class="calendar-header">
+                        <h4>August</h4>
+                    </div>
+                    <div class="calendar-body">
+                        <img src="images/sponsors/cway-logo.png" alt="Cway Water">
+                        <h5>Cway Water & Drinks</h5>
+                    </div>
+                </div>
+                
+                <div class="calendar-item">
+                    <div class="calendar-header">
+                        <h4>September</h4>
+                    </div>
+                    <div class="calendar-body">
+                        <img src="images/sponsors/nestle-logo.png" alt="Nestle Pure Life">
+                        <h5>Nestle Pure Life</h5>
+                    </div>
+                </div>
+                
+                <div class="calendar-item">
+                    <div class="calendar-header">
+                        <h4>October</h4>
+                    </div>
+                    <div class="calendar-body">
+                        <img src="images/sponsors/bokku-logo.png" alt="Bokku">
+                        <h5>Bokku! (Go Vita Powdered Chocolate Drink)</h5>
+                    </div>
+                </div>
+                
+                <div class="calendar-item">
+                    <div class="calendar-header">
+                        <h4>November</h4>
+                    </div>
+                    <div class="calendar-body">
+                        <img src="images/sponsors/sona-logo.png" alt="Sona Group">
+                        <h5>Sona Group (Arba Malt)</h5>
+                    </div>
+                </div>
+                
+                <div class="calendar-item">
+                    <div class="calendar-header">
+                        <h4>December</h4>
+                    </div>
+                    <div class="calendar-body">
+                        <img src="images/sponsors/friesland-logo.png" alt="FrieslandCampina">
+                        <h5>FrieslandCampina (Peak Yoghurt)</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="text-center">Contact Us</h2>
+            <p class="text-center">Get in touch with the Naija5Fest team</p>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Address</h4>
+                            <p>123 Adeola Odeku Street, Victoria Island, Lagos, Nigeria</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+234 800 NAIJA5FEST</p>
+                            <p>+234 701 234 5678</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@naija5fest.com.ng</p>
+                            <p>support@naija5fest.com.ng</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Office Hours</h4>
+                            <p>Monday - Friday: 9:00 AM - 5:00 PM</p>
+                            <p>Saturday: 10:00 AM - 2:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" class="form-control" placeholder="Enter your name">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" class="form-control" placeholder="Enter your email">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" class="form-control" placeholder="Enter subject">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" class="form-control" rows="5" placeholder="Enter your message"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-about">
+                    <div class="footer-logo">Naija<span>5</span>Fest</div>
+                    <p>Naija5Fest is Nigeria's premier football tournament combining grassroots competition with sponsor integration, creating opportunities for young talents across the nation.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#tournament">Tournament</a></li>
+                        <li><a href="#sponsors">Sponsors</a></li>
+                        <li><a href="#registration">Register</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3 class="footer-heading">Resources</h3>
+                    <ul>
+                        <li><a href="tournament-rules.html">Tournament Rules</a></li>
+                        <li><a href="player-eligibility.html">Player Eligibility</a></li>
+                        <li><a href="sponsor-packages.html">Sponsor Packages</a></li>
+                        <li><a href="media-kit.html">Media Kit</a></li>
+                        <li><a href="faqs.html">FAQs</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3 class="footer-heading">Legal</h3>
+                    <ul>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h3 class="footer-heading">Newsletter</h3>
+                    <p>Subscribe to our newsletter for the latest updates and offers.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit" class="btn btn-accent">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Naija5Fest. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Confetti Container for Registration Confirmation -->
+    <div class="confetti-container" id="confetti-container"></div>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

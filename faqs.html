@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequently Asked Questions - Naija5Fest</title>
+    <meta name="description" content="Answers to frequently asked questions about Naija5Fest football tournaments">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .content-page {
+            padding: 2rem 0;
+            margin-top: 80px;
+        }
+        
+        .content-container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .content-container h1 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--accent-color);
+        }
+        
+        .content-container h2 {
+            color: var(--primary-color);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .content-date {
+            font-style: italic;
+            color: #777;
+            margin-top: 2rem;
+        }
+        
+        .back-to-home {
+            display: inline-block;
+            margin-top: 1rem;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        
+        .back-to-home:hover {
+            color: var(--accent-color);
+        }
+        
+        .faq-categories {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .faq-category {
+            background-color: #f5f5f5;
+            border-radius: 30px;
+            padding: 0.5rem 1.5rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-category:hover {
+            background-color: #e0e0e0;
+        }
+        
+        .faq-category.active {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .faq-item {
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 1.5rem;
+        }
+        
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        
+        .faq-question {
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--primary-color);
+            margin-bottom: 0.8rem;
+            cursor: pointer;
+            position: relative;
+            padding-right: 30px;
+        }
+        
+        .faq-question::after {
+            content: '\f107';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            right: 0;
+            top: 0;
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-item.active .faq-question::after {
+            transform: rotate(180deg);
+        }
+        
+        .faq-answer {
+            display: none;
+            line-height: 1.7;
+        }
+        
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+        
+        .faq-answer p {
+            margin-bottom: 1rem;
+        }
+        
+        .faq-answer ul, .faq-answer ol {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+        }
+        
+        .faq-answer ul li, .faq-answer ol li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .search-container {
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        
+        .search-input {
+            width: 100%;
+            padding: 1rem 1rem 1rem 3rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        
+        .search-icon {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #777;
+        }
+        
+        .search-input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 2px rgba(0, 135, 81, 0.2);
+        }
+        
+        .no-results {
+            text-align: center;
+            padding: 2rem;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            margin: 2rem 0;
+        }
+        
+        .no-results i {
+            font-size: 3rem;
+            color: #ddd;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-cta {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            padding: 2rem;
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        .contact-cta h3 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+    </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">Naija<span>5</span>Fest</a>
+            <nav>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#tournament">Tournament</a></li>
+                    <li><a href="index.html#sponsors">Sponsors</a></li>
+                    <li><a href="index.html#registration">Register</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- FAQs Content -->
+    <section class="content-page">
+        <div class="container">
+            <div class="content-container">
+                <h1>Frequently Asked Questions</h1>
+                
+                <div class="search-container">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" class="search-input" id="faq-search" placeholder="Search for questions...">
+                </div>
+                
+                <div class="faq-categories">
+                    <div class="faq-category active" data-category="all">All Questions</div>
+                    <div class="faq-category" data-category="registration">Registration</div>
+                    <div class="faq-category" data-category="tournament">Tournament Format</div>
+                    <div class="faq-category" data-category="eligibility">Eligibility</div>
+                    <div class="faq-category" data-category="prizes">Prizes & Awards</div>
+                    <div class="faq-category" data-category="sponsors">Sponsorship</div>
+                </div>
+                
+                <h2>Registration & Participation</h2>
+                
+                <div class="faq-item active" data-category="registration">
+                    <div class="faq-question">How do I register my team for Naija5Fest?</div>
+                    <div class="faq-answer">
+                        <p>Registering your team for Naija5Fest is a simple 5-step process:</p>
+                        <ol>
+                            <li><strong>Tournament Selection:</strong> Choose which monthly tournament you want to participate in.</li>
+                            <li><strong>Team Information:</strong> Provide your team details, including name, state, and captain's contact information.</li>
+                            <li><strong>Payment Processing:</strong> Purchase the required sponsor product and pay the processing fee.</li>
+                            <li><strong>Confirmation:</strong> Receive your registration confirmation and team credentials.</li>
+                            <li><strong>Future Registration:</strong> Optionally register for upcoming tournaments at early bird rates.</li>
+                        </ol>
+                        <p>You can register online through our website or in person at designated registration centers in each participating state.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-category="registration">
+                    <div class="faq-question">What is the registration fee for Naija5Fest tournaments?</div>
+                    <div class="faq-answer">
+                        <p>The registration for Naija5Fest tournaments consists of two components:</p>
+                        <ol>
+                            <li><strong>Sponsor Product Purchase:</strong> Each team must purchase the designated sponsor product for the month they are registering for. The product and price vary by month and sponsor. For example, January registration requires the purchase of Rehau's Raha Cola 6-pack at ₦15,000.</li>
+                            <li><strong>Processing Fee:</strong> There is a standard processing fee of ₦4,600 per team.</li>
+                        </ol>
+                        <p>The total registration cost typically ranges from ₦16,600 to ₦22,600 depending on the sponsor product for that month. Early bird registrations for future tournaments often come with discounted rates.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-category="registration">
+                    <div class="faq-question">When is the registration deadline for each tournament?</div>
+                    <div class="faq-answer">
+                        <p>Registration deadlines for each monthly tournament are typically two weeks before the tournament start date. However, since each state has a maximum capacity of 32 teams, registration may close earlier if all slots are filled.</p>
+                        <p>We recommend registering as early as possible to secure your team's spot. The registration status for each state can be viewed on our interactive state map on the homepage, which shows how many slots are remaining in real-time.</p>
+                        <p>Early bird registration for future tournaments is available up to three months in advance at discounted rates.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-category="registration">
+                    <div class="faq-question">Can I register for multiple tournaments at once?</div>
+                    <div class="faq-answer">
+                        <p>Yes, you can register for multiple tournaments at once. After completing your registration for the current month's tournament, you'll have the option to register for future tournaments at early bird rates.</p>
+                        <p>Multi-tournament registrations offer several benefits:</p>
+                        <ul>
+                            <li>Discounted rates (save up to ₦2,100 per tournament)</li>
+                            <li>Guaranteed spots in future tournaments</li>
+                            <li>Ability to plan your team's schedule in advance</li>
+                            <li>Option to pay in installments for multiple registrations</li>
+                        </ul>
+                        <p>You can select which future months you want to participate in during the registration process.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-category="registration">
+                    <div class="faq-question">What happens if I need to withdraw my team from a tournament?</div>
+                    <div class="faq-answer">
+                        <p>Our withdrawal policy is as follows:</p>
+                        <ul>
+                            <li><strong>More than 14 days before the tournament:</strong> 50% refund of the processing fee (the sponsor product purchase is non-refundable)</li>
+                            <li><strong>7-14 days before the tournament:</strong> 25% refund of the processing fee</li>
+                            <li><strong>Less than 7 days before the tournament:</strong> No refund</li>
+                        </ul>
+                        <p>Alternatively, instead of withdrawing, you can:</p>
+                        <ul>
+                            <li>Transfer your registration to a future tournament (subject to a ₦2,000 transfer fee)</li>
+                            <li>Transfer your registration to another team (subject to eligibility verification)</li>
+                        </ul>
+                        <p>All withdrawal and transfer requests must be submitted in writing to registration@naija5fest.com.ng.</p>
+                    </div>
+                </div>
+                
+                <h2>Tournament Format & Rules</h2>
+                
+                <div class="faq-item" data-category="tournament">
+                    <div class="faq-question">What is the format of Naija5Fest tournaments?</div>
+                    <div class="faq-answer">
+                        <p>Naija5Fest operates with a two-tier tournament structure:</p>
+                        
+                        <p><strong>Monthly Qualifiers:</strong></p>
+                        <ul>
+                            <li>Held in all 16 participating states</li>
+                            <li>Single-elimination knockout format</li>
+                            <li>Maximum of 32 teams per state</li>
+                            <li>5-a-side format (4 outfield players + 1 goalkeeper)</li>
+                            <li>Matches consist of two 10-minute halves with a 2-minute halftime break</li>
+                            <li>In case of a tie, matches go directly to penalty shootouts</li>
+                            <li>The winning team from each state qualifies for the Year-End Championship</li>
+                        </ul>
+                        
+                        <p><strong>Year-End Championship ("Kings of 5's"):</strong></p>
+                        <ul>
+                            <li>Features all 12 monthly winning teams</li>
+                            <li>Group stage followed by knockout rounds</li>
+                            <li>Teams divided into 4 groups of 3 teams each</li>
+                            <li>Top 2 teams from each group advance to knockout stage</li>
+                            <li>Quarter-finals, semi-finals, and final match</li>
+                            <li>Held in Lagos in December</li>
+                        </ul>
+                        
+                        <p>For complete details, please refer to our <a href="tournament-rules.html">Tournament Rules</a> page.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-category="tournament">
+                    <div class="faq-question">Where are the tournaments held?</div>
+                    <div class="faq-answer">
+                        <p>Naija5Fest tournaments are held across 16 Nigerian states:</p>
+                        
+                        <ul>
+                            <li><strong>Southwest:</strong> Lagos, Ogun, Osun, Oyo, Ondo, Ekiti</li>
+                            <li><strong>North Central:</strong> Abuja (FCT), Kaduna, Kwara, Plateau</li>
+                            <li><strong>Southeast:</strong> Anambra, Enugu, Abia</li>
+                            <li><strong>South-South:</strong> Rivers, Delta, Edo</li>
+                        </ul>
+                        
+                        <p>The specific venues in each state are selected based on:</p>
+                        <ul>
+                            <li>Quality of playing surface</li>
+                            <li>Accessibility for teams and spectators</li>
+                            <li>Adequate facilities (changing rooms, seating, etc.)</li>
+                            <li>Security considerations</li>
+                        </ul>
+                        
+                        <p>The Year-End Championship is always held in Lagos at a premium venue that can accommodate the scale and prestige of the event.</p>
+                        
+                        <p>Venue details for each tournament are announced approximately one month before the event and communicated to all registered teams.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-category="tournament">
+                    <div class="faq-question">What are the rules for substitutions?</div>
+                    <div class="faq-answer">
+                        <p>Naija5Fest follows a rolling substitution system:</p>
+                        
+                        <ul>
+                            <li>Teams can make unlimited substitutions throughout the match</li>
+                            <li>Players can be substituted in and out multiple times (re-entry is allowed)</li>
+                            <li>Substitutions can only be made when the ball is out of play</li>
+                            <li>The referee must acknowledge and permit the substitution</li>
+                            <li>The player being substituted must leave the field before the substitute enters</li>
+                            <li>Substitutions must be made at the designated substitution zone (near the halfway line)</li>
+                        </ul>
+                        
+                        <p>This rolling substitution system allows teams to manage player fatigue effectively and utilize their entire squad throughout the tournament.</p>
+                        
+                        <p>Improper substitutions may result in a yellow card for the player entering the field and a direct free kick awarded to the opposing team.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-category="tournament">
+                    <div class="faq-question">What happens in case of a tie during knockout matches?</div>
+                    <div class="faq-answer">
+                        <p>In case of a tie after the regular playing time (two 10-minute halves), matches proceed directly to a penalty shootout. There is no extra time period.</p>
+                        
+                        <p>The penalty shootout format is as follows:</p>
+                        
+                        <ul>
+                            <li>Each team takes 3 penalties initially</li>
+                            <li>If still tied after 3 penalties each, the shootout continues in sudden death format</li>
+                            <li>In sudden death, each team takes one penalty until one team scores and the other misses</li>
+                            <li>All players on the field at the end of the match must take a penalty before any player can take a second penalty</li>
+                            <li>Only players who were on the field at the final whistle can participate in the penalty shootout</li>
+                            <li>The goalkeeper who finished the match must be the goalkeeper for the penalty shootout (unless injured)</li>
+                        </ul>
+                        
+                        <p>The referee's decision on all matters related to the penalty shootout is final.</p>
+                    </div>
+                </div>
+                
+                <h2>Player Eligibility</h2>
+                
+                <div class="faq-item" data-category="eligibility">
+                    <div class="faq-question">Who is eligible to participate in Naija5Fest tournaments?</div>
+                    <div class="faq-answer">
+                        <p>Naija5Fest is primarily designed for amateur and semi-professional players. The basic eligibility requirements are:</p>
+                        
+                        <ul>
+                            <li><strong>Age:</strong> Players must be at least 18 years of age (players 16-17 may participate with parental consent)</li>
+                            <li><strong>Residency:</strong> Players must be Nigerian citizens or legal residents of Nigeria</li>
+                            <li><strong>Professional Status:</strong> Current professional players under contract with NPFL clubs are not eligible</li>
+                            <li><strong>Team Composition:</strong> Teams must include at least 5 players who are residents of the state they are representing</li>
+                        </ul>
+                        
+                        <p>For detailed eligibility requirements, please refer to our <a href="player-eligibility.html">Player Eligibility</a> page.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-category="eligibility">
+                    <div class="faq-question">Can professional players participate in Naija5Fest?</div>
+                    <div class="faq-answer">
+                        <p>Naija5Fest has specific rules regarding professional players:</p>
+                        
+                        <ul>
+                            <li>Current professional players under contract with clubs in the Nigeria Professional Football League (NPFL) are not eligible to participate.</li>
+                            <li>Players who have been under professional contract within the last 6 months are not eligible.</li>
+                            <li>Former professional players who have been without a professional contract for more than 6 months are eligible to participate.</li>
+                            <li>Teams may include a maximum of 2 former professional players (those who have been without a professional contract for more than 6 months).</li>
+                        </ul>
+                        
+                        <p>These restrictions are in place to maintain the grassroots nature of the tournament and ensure fair competition among teams.</p>
+                        
+                        <p>For the purposes of this tournament, a "professional player" is defined as someone who has been under contract with a club in a recognized professional league and has received payment as their primary source of income for playing football.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-category="eligibility">
+                    <div class="faq-question">What documentation is required to verify player eligibility?</div>
+                    <div class="faq-answer">
+                        <p>To verify player eligibility, the following documentation is required:</p>
+                        
+                        <p><strong>Personal Identification (one of the following):</strong></p>
+                        <ul>
+                            <li>Nigerian National ID Card</li>
+                            <li>International Passport</li>
+                            <li>Driver's License</li>
+                            <li>Voter's Card</li>
+                            <li>NIN (National Identification Number) with supporting photo ID</li>
+                        </ul>
+                        
+                        <p><strong>Proof of Residency (one of the following):</strong></p>
+                        <ul>
+                            <li>Utility bill (electricity, water, etc.) from the last 3 months</li>
+                            <li>Bank statement showing address from the last 3 months</li>
+                            <li>Tenancy agreement or property ownership documents</li>
+                            <li>Official government correspondence showing address</li>
+                            <li>Employment letter or student ID with address verification</li>
+                        </ul>
+                        
+                        <p><strong>Additional Documentation (if applicable):</strong></p>
+                        <ul>
+                            <li>Former professional players: Documentation of their last professional contract</li>
+                            <li>Players under 18: Signed parental/guardian consent form and birth certificate</li>
+                            <li>Non-Nigerian citizens: Valid residency permits or documentation proving legal residency status</li>
+                        </ul>
+                        
+                        <p>All documentation must be submitted during the registration process and verified by tournament officials. Players must also bring their original identification documents to the tournament for on-site verification.</p>
+                    </div>
+                </div>
+                
+                <h2>Prizes & Awards</h2>
+                
+                <div class="faq-item" data-category="prizes">
+                    <div class="faq-question">What prizes are awarded to the winning teams?</div>
+                    <div class="faq-answer">
+                        <p>Naija5Fest offers substantial prizes at both the monthly qualifier and championship levels:</p>
+                        
+                        <p><strong>Monthly Qualifier Prizes:</strong></p>
+                        <ul>
+                            <li>₦2,000,000 cash prize for the winning team</li>
+                            <li>Team jerseys for all players on the winning team</li>
+                            <li>Gold medals for all players on the winning team</li>
+                            <li>Qualification for the Lagos Grand Finale (Year-End Championship)</li>
+                            <li>Silver medals for the runners-up team</li>
+                            <li>Bronze medals for the third-place team</li>
+                            <li>Individual awards: Best Player, Top Scorer, Best Goalkeeper</li>
+                        </ul>
+                        
+                        <p><strong>Year-End Championship Prizes:</strong></p>
+                        <ul>
+                            <li>₦5,000,000 grand prize for the winning team</li>
+                            <li>Championship trophy</li>
+                            <li>1-year brand ambassadorship for the winning team</li>
+                            <li>Special edition championship jerseys</li>
+                            <li>Media coverage and recognition</li>
+                            <li>₦2,000,000 for the runners-up team</li>
+                            <li>₦1,000,000 for the third-place team</li>
+                            <li>Individual awards: Tournament MVP, Golden Boot, Golden Glove, Fair Play Award</li>
+                        </ul>
+                        
+                        <p>All prizes are subject to applicable taxes and withholdings as required by Nigerian law.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-category="prizes">
+                    <div class="faq-question">How and when are prize monies distributed?</div>
+                    <div class="faq-answer">
+                        <p>Prize money distribution follows these procedures:</p>
+                        
+                        <p><strong>Monthly Qualifier Prizes:</strong></p>
+                        <ul>
+                            <li>Prize money is awarded immediately after the final match and award ceremony</li>
+                            <li>The team captain must sign a prize receipt form</li>
+                            <li>Payment is made via bank transfer to the team's designated account within 3 business days</li>
+                            <li>Teams must provide valid bank account details during registration</li>
+                            <li>All team members must be present at the award ceremony to receive their medals</li>
+                        </ul>
+                        
+                        <p><strong>Year-End Championship Prizes:</strong></p>
+                        <ul>
+                            <li>Prize money is awarded during the championship award ceremony</li>
+                            <li>The team captain and team manager must sign prize receipt forms</li>
+                            <li>Payment is made via bank transfer within 5 business days</li>
+                            <li>For the winning team, the brand ambassadorship contract is signed within 14 days after the championship</li>
+                        </ul>
+                        
+                        <p>All prize recipients must provide valid identification and may be required to complete tax forms depending on the prize amount.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-category="prizes">
+                    <div class="faq-question">What does the 1-year brand ambassadorship for championship winners include?</div>
+                    <div class="faq-answer">
+                        <p>The 1-year brand ambassadorship awarded to the Year-End Championship winning team includes:</p>
+                        
+                        <ul>
+                            <li>Official designation as "Naija5Fest Champions" for one year</li>
+                            <li>Promotional appearances at Naija5Fest events (minimum of 6 events)</li>
+                            <li>Feature in Naija5Fest marketing materials and campaigns</li>
+                            <li>Media interviews and press opportunities</li>
+                            <li>Social media promotion across Naija5Fest platforms</li>
+                            <li>Potential opportunities with tournament sponsors (subject to separate agreements)</li>
+                            <li>Special championship team kit for all appearances</li>
+                        </ul>
+                        
+                        <p>The ambassadorship contract includes compensation for appearances and activities beyond the initial prize money. The team will be assigned a Naija5Fest representative to coordinate all ambassadorship activities.</p>
+                        
+                        <p>The ambassadorship begins immediately after the championship and continues until the next Year-End Championship.</p>
+                    </div>
+                </div>
+                
+                <h2>Sponsorship</h2>
+                
+                <div class="faq-item" data-category="sponsors">
+                    <div class="faq-question">How does the sponsor integration work in Naija5Fest?</div>
+                    <div class="faq-answer">
+                        <p>Naija5Fest features a unique sponsor integration model that directly connects brands with participants:</p>
+                        
+                        <p><strong>Monthly Sponsor Rotation:</strong></p>
+                        <ul>
+                            <li>Each month features a different sponsor (e.g., January for Rehau's Raha Cola, February for Fumman Foods, etc.)</li>
+                            <li>Teams register by purchasing the sponsor's product as part of the registration process</li>
+                            <li>This ensures actual product purchase and consumption, not just brand visibility</li>
+                        </ul>
+                        
+                        <p><strong>Sponsor Integration Points:</strong></p>
+                        <ul>
+                            <li>Registration process (product purchase requirement)</li>
+                            <li>Tournament naming rights (e.g., "Rehau's Raha Cola January Qualifiers")</li>
+                            <li>Branded jerseys and tournament materials</li>
+                            <li>Venue branding and activation spaces</li>
+                            <li>Product sampling opportunities</li>
+                            <li>Social media and marketing campaigns</li>
+                            <li>Media coverage and press mentions</li>
+                        </ul>
+                        
+                        <p>This integration model provides sponsors with guaranteed product sales, direct consumer engagement, and extensive brand visibility across multiple touchpoints.</p>
+                        
+                        <p>For more information about sponsorship opportunities, please visit our <a href="sponsor-packages.html">Sponsor Packages</a> page.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-category="sponsors">
+                    <div class="faq-question">How can my company become a sponsor for Naija5Fest?</div>
+                    <div class="faq-answer">
+                        <p>Companies interested in sponsoring Naija5Fest can follow these steps:</p>
+                        
+                        <ol>
+                            <li><strong>Initial Inquiry:</strong> Contact our sponsorship team at sponsors@naija5fest.com.ng or through the contact form on our website.</li>
+                            <li><strong>Consultation:</strong> Our team will schedule a consultation to understand your marketing objectives, target audience, and budget.</li>
+                            <li><strong>Package Selection:</strong> Based on your needs, we'll recommend appropriate sponsorship packages (Monthly, Year-End Championship, or Custom Integration).</li>
+                            <li><strong>Proposal:</strong> You'll receive a detailed sponsorship proposal outlining benefits, costs, and implementation timeline.</li>
+                            <li><strong>Agreement:</strong> Once terms are finalized, we'll prepare a sponsorship agreement for signing.</li>
+                            <li><strong>Implementation:</strong> Our team will work with you to implement all aspects of the sponsorship, from product integration to branding and activation.</li>
+                        </ol>
+                        
+                        <p>We offer various sponsorship levels to accommodate different budgets and objectives:</p>
+                        <ul>
+                            <li>Monthly Gold Package (₦35,000,000): Exclusive naming rights for 1 month across all 16 states</li>
+                            <li>Monthly Silver Package (₦15,000,000): Exclusive naming rights for 1 state qualifier</li>
+                            <li>Monthly Bronze Package (₦8,000,000): Co-sponsorship rights for 1 state qualifier</li>
+                            <li>Championship Platinum Package (₦75,000,000): Exclusive title sponsorship of the Year-End Championship</li>
+                            <li>Custom packages tailored to specific marketing objectives</li>
+                        </ul>
+                        
+                        <p>For detailed information about sponsorship opportunities, please visit our <a href="sponsor-packages.html">Sponsor Packages</a> page.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" data-category="sponsors">
+                    <div class="faq-question">What are the benefits of sponsoring Naija5Fest?</div>
+                    <div class="faq-answer">
+                        <p>Sponsoring Naija5Fest offers numerous benefits that go beyond traditional sports sponsorships:</p>
+                        
+                        <p><strong>Direct Product Integration:</strong></p>
+                        <ul>
+                            <li>Guaranteed product sales through registration requirements</li>
+                            <li>Direct product-to-registration linkage ensures actual consumption</li>
+                            <li>Product sampling opportunities to thousands of participants and spectators</li>
+                        </ul>
+                        
+                        <p><strong>Brand Exposure:</strong></p>
+                        <ul>
+                            <li>Reach over 500,000 direct participants and spectators across 16 states</li>
+                            <li>Media coverage reaching an estimated 15 million Nigerians</li>
+                            <li>Social media engagement with over 2 million football enthusiasts</li>
+                            <li>Brand visibility in high-traffic tournament venues</li>
+                        </ul>
+                        
+                        <p><strong>Market Penetration:</strong></p>
+                        <ul>
+                            <li>Access to 16 key markets across Nigeria</li>
+                            <li>Engagement with diverse demographic groups</li>
+                            <li>Product trial and adoption opportunities</li>
+                            <li>Local market activation in multiple regions</li>
+                        </ul>
+                        
+                        <p><strong>Brand Association:</strong></p>
+                        <ul>
+                            <li>Association with grassroots sports development</li>
+                            <li>Positive community engagement</li>
+                            <li>Support for Nigerian youth and talent</li>
+                            <li>Connection with the passion and energy of football</li>
+                        </ul>
+                        
+                        <p>Our sponsors consistently report strong ROI from their Naija5Fest partnerships, with measurable increases in product sales, brand awareness, and positive brand perception.</p>
+                    </div>
+                </div>
+                
+                <div class="no-results" id="no-results" style="display: none;">
+                    <i class="fas fa-search"></i>
+                    <h3>No matching questions found</h3>
+                    <p>Try different keywords or browse the categories above</p>
+                </div>
+                
+                <div class="contact-cta">
+                    <h3>Can't find what you're looking for?</h3>
+                    <p>Contact our support team for personalized assistance with any questions you may have.</p>
+                    <a href="index.html#contact" class="btn btn-cta">Contact Us</a>
+                </div>
+                
+                <p class="content-date">Last Updated: August 18, 2025</p>
+                
+                <a href="index.html" class="back-to-home"><i class="fas fa-arrow-left"></i> Back to Home</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-about">
+                    <div class="footer-logo">Naija<span>5</span>Fest</div>
+                    <p>Naija5Fest is Nigeria's premier football tournament combining grassroots competition with sponsor integration, creating opportunities for young talents across the nation.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#tournament">Tournament</a></li>
+                        <li><a href="index.html#sponsors">Sponsors</a></li>
+                        <li><a href="index.html#registration">Register</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3 class="footer-heading">Resources</h3>
+                    <ul>
+                        <li><a href="tournament-rules.html">Tournament Rules</a></li>
+                        <li><a href="player-eligibility.html">Player Eligibility</a></li>
+                        <li><a href="sponsor-packages.html">Sponsor Packages</a></li>
+                        <li><a href="media-kit.html">Media Kit</a></li>
+                        <li><a href="faqs.html">FAQs</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3 class="footer-heading">Legal</h3>
+                    <ul>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h3 class="footer-heading">Newsletter</h3>
+                    <p>Subscribe to our newsletter for the latest updates and offers.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit" class="btn btn-accent">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Naija5Fest. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // FAQ Accordion Functionality
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', function() {
+                    const faqItem = this.parentElement;
+                    const isActive = faqItem.classList.contains('active');
+                    
+                    // Close all FAQ items
+                    document.querySelectorAll('.faq-item').forEach(item => {
+                        item.classList.remove('active');
+                    });
+                    
+                    // If the clicked item wasn't active, make it active
+                    if (!isActive) {
+                        faqItem.classList.add('active');
+                    }
+                });
+            });
+            
+            // Category Filtering
+            const categoryButtons = document.querySelectorAll('.faq-category');
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            categoryButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const category = this.getAttribute('data-category');
+                    
+                    // Update active category button
+                    categoryButtons.forEach(btn => {
+                        btn.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                    
+                    // Filter FAQ items
+                    faqItems.forEach(item => {
+                        if (category === 'all' || item.getAttribute('data-category') === category) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                    
+                    // Check if any items are visible
+                    checkNoResults();
+                });
+            });
+            
+            // Search Functionality
+            const searchInput = document.getElementById('faq-search');
+            const noResults = document.getElementById('no-results');
+            
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+                
+                // Reset category filters
+                categoryButtons.forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                document.querySelector('[data-category="all"]').classList.add('active');
+                
+                // Filter FAQ items based on search term
+                let resultsFound = false;
+                
+                faqItems.forEach(item => {
+                    const question = item.querySelector('.faq-question').textContent.toLowerCase();
+                    const answer = item.querySelector('.faq-answer').textContent.toLowerCase();
+                    
+                    if (searchTerm === '' || question.includes(searchTerm) || answer.includes(searchTerm)) {
+                        item.style.display = 'block';
+                        resultsFound = true;
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+                
+                // Show/hide no results message
+                if (searchTerm !== '' && !resultsFound) {
+                    noResults.style.display = 'block';
+                } else {
+                    noResults.style.display = 'none';
+                }
+            });
+            
+            // Helper function to check if any results are visible
+            function checkNoResults() {
+                let visibleItems = 0;
+                
+                faqItems.forEach(item => {
+                    if (item.style.display !== 'none') {
+                        visibleItems++;
+                    }
+                });
+                
+                if (visibleItems === 0) {
+                    noResults.style.display = 'block';
+                } else {
+                    noResults.style.display = 'none';
+                }
+            }
+        });
+    </script>
+</body>
+</html>

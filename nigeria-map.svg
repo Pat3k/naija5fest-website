@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+  <!-- Simplified Nigeria Map with participating states highlighted -->
+  <!-- Lagos -->
+  <path id="lagos" data-state="lagos" class="state active" d="M320,550 L340,570 L360,560 L350,540 L330,530 Z" />
+  
+  <!-- Ogun -->
+  <path id="ogun" data-state="ogun" class="state active" d="M330,530 L350,540 L370,530 L380,510 L360,500 L340,510 Z" />
+  
+  <!-- Osun -->
+  <path id="osun" data-state="osun" class="state active" d="M380,510 L400,520 L420,510 L410,490 L390,480 L370,490 Z" />
+  
+  <!-- Oyo -->
+  <path id="oyo" data-state="oyo" class="state active" d="M360,500 L380,510 L370,490 L350,480 L330,490 Z" />
+  
+  <!-- Ondo -->
+  <path id="ondo" data-state="ondo" class="state active" d="M410,490 L430,500 L450,490 L440,470 L420,460 L400,470 Z" />
+  
+  <!-- Abuja (FCT) -->
+  <path id="abuja" data-state="abuja" class="state active" d="M400,350 L420,360 L430,350 L420,330 L400,320 Z" />
+  
+  <!-- Kaduna -->
+  <path id="kaduna" data-state="kaduna" class="state active" d="M380,300 L400,320 L420,330 L430,310 L420,290 L400,280 Z" />
+  
+  <!-- Kwara -->
+  <path id="kwara" data-state="kwara" class="state active" d="M350,400 L370,410 L390,400 L380,380 L360,370 L340,380 Z" />
+  
+  <!-- Anambra -->
+  <path id="anambra" data-state="anambra" class="state active" d="M460,450 L480,460 L490,450 L480,430 L460,420 Z" />
+  
+  <!-- Enugu -->
+  <path id="enugu" data-state="enugu" class="state active" d="M480,430 L500,440 L510,430 L500,410 L480,400 L470,410 Z" />
+  
+  <!-- Rivers -->
+  <path id="rivers" data-state="rivers" class="state active" d="M470,520 L490,530 L510,520 L500,500 L480,490 L460,500 Z" />
+  
+  <!-- Abia -->
+  <path id="abia" data-state="abia" class="state active" d="M490,480 L510,490 L520,480 L510,460 L490,450 L480,460 Z" />
+  
+  <!-- Delta -->
+  <path id="delta" data-state="delta" class="state active" d="M440,500 L460,510 L480,500 L470,480 L450,470 L430,480 Z" />
+  
+  <!-- Edo -->
+  <path id="edo" data-state="edo" class="state active" d="M430,470 L450,480 L470,470 L460,450 L440,440 L420,450 Z" />
+  
+  <!-- Plateau -->
+  <path id="plateau" data-state="plateau" class="state active" d="M450,350 L470,360 L480,350 L470,330 L450,320 L440,330 Z" />
+  
+  <!-- Ekiti -->
+  <path id="ekiti" data-state="ekiti" class="state active" d="M390,480 L410,490 L420,480 L410,460 L390,450 L380,460 Z" />
+  
+  <!-- Other states (non-participating) -->
+  <path class="state" d="M300,300 L320,310 L330,300 L320,280 L300,270 Z" />
+  <path class="state" d="M500,300 L520,310 L530,300 L520,280 L500,270 Z" />
+  <path class="state" d="M550,350 L570,360 L580,350 L570,330 L550,320 Z" />
+  <path class="state" d="M250,400 L270,410 L280,400 L270,380 L250,370 Z" />
+  <path class="state" d="M530,400 L550,410 L560,400 L550,380 L530,370 Z" />
+  <path class="state" d="M300,450 L320,460 L330,450 L320,430 L300,420 Z" />
+  <path class="state" d="M520,450 L540,460 L550,450 L540,430 L520,420 Z" />
+  <path class="state" d="M270,500 L290,510 L300,500 L290,480 L270,470 Z" />
+  <path class="state" d="M520,500 L540,510 L550,500 L540,480 L520,470 Z" />
+  
+  <!-- Nigeria outline -->
+  <path fill="none" stroke="#333" stroke-width="2" d="M250,250 C300,200 400,180 500,200 C600,220 650,300 670,400 C690,500 650,600 600,650 C550,700 450,720 350,700 C250,680 200,600 180,500 C160,400 200,300 250,250 Z" />
+</svg>

@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Kit - Naija5Fest</title>
+    <meta name="description" content="Media resources, press information, and brand assets for Naija5Fest football tournaments">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .content-page {
+            padding: 2rem 0;
+            margin-top: 80px;
+        }
+        
+        .content-container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .content-container h1 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--accent-color);
+        }
+        
+        .content-container h2 {
+            color: var(--primary-color);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .content-container h3 {
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+        
+        .content-container p {
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+        
+        .content-container ul, .content-container ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+        
+        .content-container ul li, .content-container ol li {
+            margin-bottom: 0.5rem;
+            line-height: 1.7;
+        }
+        
+        .content-date {
+            font-style: italic;
+            color: #777;
+            margin-top: 2rem;
+        }
+        
+        .back-to-home {
+            display: inline-block;
+            margin-top: 1rem;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        
+        .back-to-home:hover {
+            color: var(--accent-color);
+        }
+        
+        .media-contact-box {
+            background-color: #f9f9f9;
+            border-left: 4px solid var(--primary-color);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .media-contact-box h3 {
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+        }
+        
+        .contact-item i {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            margin-right: 0.5rem;
+        }
+        
+        .asset-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .asset-card {
+            background-color: #f5f5f5;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .asset-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .asset-image {
+            height: 200px;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #777;
+            font-size: 0.9rem;
+            text-align: center;
+            padding: 1rem;
+        }
+        
+        .asset-image img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        
+        .asset-info {
+            padding: 1rem;
+        }
+        
+        .asset-info h4 {
+            margin-bottom: 0.5rem;
+        }
+        
+        .asset-info p {
+            font-size: 0.9rem;
+            color: #777;
+            margin-bottom: 1rem;
+        }
+        
+        .asset-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+        
+        .asset-actions .btn {
+            padding: 0.5rem 1rem;
+            font-size: 0.8rem;
+        }
+        
+        .fact-sheet {
+            background-color: #f5f5f5;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .fact-sheet h3 {
+            margin-top: 0;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .fact-item {
+            display: flex;
+            margin-bottom: 0.8rem;
+        }
+        
+        .fact-label {
+            font-weight: 600;
+            width: 150px;
+            flex-shrink: 0;
+        }
+        
+        .fact-value {
+            flex-grow: 1;
+        }
+        
+        .press-release {
+            background-color: white;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .press-release:hover {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .press-release h4 {
+            margin-bottom: 0.5rem;
+        }
+        
+        .press-date {
+            font-size: 0.9rem;
+            color: #777;
+            margin-bottom: 1rem;
+        }
+        
+        .press-excerpt {
+            margin-bottom: 1rem;
+        }
+        
+        .download-section {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .download-section h3 {
+            margin-top: 0;
+        }
+        
+        .download-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .download-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .download-item:last-child {
+            border-bottom: none;
+        }
+        
+        .download-info {
+            display: flex;
+            align-items: center;
+        }
+        
+        .download-icon {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-right: 1rem;
+        }
+        
+        .download-name {
+            font-weight: 600;
+        }
+        
+        .download-meta {
+            font-size: 0.8rem;
+            color: #777;
+        }
+        
+        @media (max-width: 992px) {
+            .asset-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .asset-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 0.8rem;
+            }
+            
+            .fact-item {
+                flex-direction: column;
+            }
+            
+            .fact-label {
+                width: 100%;
+                margin-bottom: 0.3rem;
+            }
+        }
+    </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">Naija<span>5</span>Fest</a>
+            <nav>
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#tournament">Tournament</a></li>
+                    <li><a href="index.html#sponsors">Sponsors</a></li>
+                    <li><a href="index.html#registration">Register</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Media Kit Content -->
+    <section class="content-page">
+        <div class="container">
+            <div class="content-container">
+                <h1>Media Kit</h1>
+                
+                <p>Last Updated: August 18, 2025</p>
+                
+                <p>Welcome to the Naija5Fest Media Kit. This resource provides journalists, media outlets, and content creators with essential information, assets, and contacts to help you cover Naija5Fest accurately and effectively.</p>
+                
+                <div class="media-contact-box">
+                    <h3>Media Contacts</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-user"></i>
+                            <div>
+                                <strong>Oluwaseun Adeyemi</strong><br>
+                                Media Relations Manager
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <a href="mailto:media@naija5fest.com.ng">media@naija5fest.com.ng</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <a href="tel:+2348012345678">+234 801 234 5678</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <h2>About Naija5Fest</h2>
+                
+                <p>Naija5Fest is Nigeria's premier 5-a-side football tournament combining grassroots competition with innovative sponsor integration. The tournament operates across 16 Nigerian states with monthly qualifiers leading to a prestigious year-end championship.</p>
+                
+                <p>What makes Naija5Fest unique is our direct product-to-registration linkage, where teams register by purchasing sponsor products. This creates a powerful platform for brand exposure while developing grassroots football talent across Nigeria.</p>
+                
+                <div class="fact-sheet">
+                    <h3>Quick Facts</h3>
+                    
+                    <div class="fact-item">
+                        <div class="fact-label">Founded:</div>
+                        <div class="fact-value">2023</div>
+                    </div>
+                    
+                    <div class="fact-item">
+                        <div class="fact-label">Headquarters:</div>
+                        <div class="fact-value">Lagos, Nigeria</div>
+                    </div>
+                    
+                    <div class="fact-item">
+                        <div class="fact-label">Tournament Format:</div>
+                        <div class="fact-value">Monthly qualifiers across 16 states, culminating in a year-end championship</div>
+                    </div>
+                    
+                    <div class="fact-item">
+                        <div class="fact-label">Participating States:</div>
+                        <div class="fact-value">Lagos, Ogun, Osun, Oyo, Ondo, Abuja, Kaduna, Kwara, Anambra, Enugu, Rivers, Abia, Delta, Edo, Plateau, Ekiti</div>
+                    </div>
+                    
+                    <div class="fact-item">
+                        <div class="fact-label">Annual Participants:</div>
+                        <div class="fact-value">Over 6,000 players (500+ teams)</div>
+                    </div>
+                    
+                    <div class="fact-item">
+                        <div class="fact-label">Annual Spectators:</div>
+                        <div class="fact-value">Over 100,000 across all events</div>
+                    </div>
+                    
+                    <div class="fact-item">
+                        <div class="fact-label">Monthly Prize:</div>
+                        <div class="fact-value">₦2,000,000 + Team Jerseys + Gold Medals + Championship Qualification</div>
+                    </div>
+                    
+                    <div class="fact-item">
+                        <div class="fact-label">Championship Prize:</div>
+                        <div class="fact-value">₦5,000,000 + Championship Trophy + 1-Year Brand Ambassadorship</div>
+                    </div>
+                    
+                    <div class="fact-item">
+                        <div class="fact-label">Current Sponsors:</div>
+                        <div class="fact-value">Rehau's Raha Cola, Fumman Foods, SWAN Water, Grand Oak, Delly Foods, Fearless Energy Drink, and more</div>
+                    </div>
+                </div>
+                
+                <h2>Brand Assets</h2>
+                
+                <h3>Logos</h3>
+                
+                <div class="asset-grid">
+                    <div class="asset-card">
+                        <div class="asset-image">
+                            <div>Naija5Fest Primary Logo</div>
+                        </div>
+                        <div class="asset-info">
+                            <h4>Primary Logo</h4>
+                            <p>Full color logo for light backgrounds</p>
+                            <div class="asset-actions">
+                                <a href="#" class="btn btn-sm btn-primary">PNG</a>
+                                <a href="#" class="btn btn-sm btn-primary">SVG</a>
+                                <a href="#" class="btn btn-sm btn-primary">EPS</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="asset-card">
+                        <div class="asset-image">
+                            <div>Naija5Fest White Logo</div>
+                        </div>
+                        <div class="asset-info">
+                            <h4>White Logo</h4>
+                            <p>White version for dark backgrounds</p>
+                            <div class="asset-actions">
+                                <a href="#" class="btn btn-sm btn-primary">PNG</a>
+                                <a href="#" class="btn btn-sm btn-primary">SVG</a>
+                                <a href="#" class="btn btn-sm btn-primary">EPS</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="asset-card">
+                        <div class="asset-image">
+                            <div>Naija5Fest Icon</div>
+                        </div>
+                        <div class="asset-info">
+                            <h4>Icon Logo</h4>
+                            <p>Simplified icon version</p>
+                            <div class="asset-actions">
+                                <a href="#" class="btn btn-sm btn-primary">PNG</a>
+                                <a href="#" class="btn btn-sm btn-primary">SVG</a>
+                                <a href="#" class="btn btn-sm btn-primary">EPS</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <h3>Event Photos</h3>
+                
+                <div class="asset-grid">
+                    <div class="asset-card">
+                        <div class="asset-image">
+                            <div>Lagos Tournament Action</div>
+                        </div>
+                        <div class="asset-info">
+                            <h4>Lagos Tournament</h4>
+                            <p>January 2025 qualifier action shots</p>
+                            <div class="asset-actions">
+                                <a href="#" class="btn btn-sm btn-primary">Download</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="asset-card">
+                        <div class="asset-image">
+                            <div>Award Ceremony</div>
+                        </div>
+                        <div class="asset-info">
+                            <h4>Award Ceremony</h4>
+                            <p>2024 Championship trophy presentation</p>
+                            <div class="asset-actions">
+                                <a href="#" class="btn btn-sm btn-primary">Download</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="asset-card">
+                        <div class="asset-image">
+                            <div>Sponsor Activation</div>
+                        </div>
+                        <div class="asset-info">
+                            <h4>Sponsor Activation</h4>
+                            <p>Brand integration at tournaments</p>
+                            <div class="asset-actions">
+                                <a href="#" class="btn btn-sm btn-primary">Download</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <h3>Videos</h3>
+                
+                <div class="asset-grid">
+                    <div class="asset-card">
+                        <div class="asset-image">
+                            <div>Tournament Highlights</div>
+                        </div>
+                        <div class="asset-info">
+                            <h4>Tournament Highlights</h4>
+                            <p>2024 Championship highlights reel (2:30)</p>
+                            <div class="asset-actions">
+                                <a href="#" class="btn btn-sm btn-primary">MP4</a>
+                                <a href="#" class="btn btn-sm btn-primary">YouTube</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="asset-card">
+                        <div class="asset-image">
+                            <div>Naija5Fest Promo</div>
+                        </div>
+                        <div class="asset-info">
+                            <h4>Promotional Video</h4>
+                            <p>2025 Season promotional video (1:15)</p>
+                            <div class="asset-actions">
+                                <a href="#" class="btn btn-sm btn-primary">MP4</a>
+                                <a href="#" class="btn btn-sm btn-primary">YouTube</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="asset-card">
+                        <div class="asset-image">
+                            <div>Player Interviews</div>
+                        </div>
+                        <div class="asset-info">
+                            <h4>Player Interviews</h4>
+                            <p>Interviews with past champions (5:45)</p>
+                            <div class="asset-actions">
+                                <a href="#" class="btn btn-sm btn-primary">MP4</a>
+                                <a href="#" class="btn btn-sm btn-primary">YouTube</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <h2>Press Releases</h2>
+                
+                <div class="press-release">
+                    <h4>Naija5Fest Announces 2025 Tournament Schedule and Sponsor Lineup</h4>
+                    <div class="press-date">August 10, 2025</div>
+                    <div class="press-excerpt">
+                        <p>Naija5Fest today announced the complete schedule for its 2025 tournament series, featuring monthly qualifiers across 16 Nigerian states and the year-end championship in Lagos. The organization also revealed its full sponsor lineup, including Rehau's Raha Cola as the January sponsor and FrieslandCampina's Peak Yoghurt for the December championship.</p>
+                    </div>
+                    <a href="#" class="btn btn-sm btn-primary">Read Full Release</a>
+                </div>
+                
+                <div class="press-release">
+                    <h4>Naija5Fest Expands to 16 States for 2025 Season</h4>
+                    <div class="press-date">July 15, 2025</div>
+                    <div class="press-excerpt">
+                        <p>Following the success of its 2024 season, Naija5Fest announced today that it will expand its tournament footprint to cover 16 Nigerian states in 2025. The expansion includes the addition of Plateau and Ekiti states to the competition roster, bringing the tournament to even more grassroots football talent across the country.</p>
+                    </div>
+                    <a href="#" class="btn btn-sm btn-primary">Read Full Release</a>
+                </div>
+                
+                <div class="press-release">
+                    <h4>Naija5Fest Increases Prize Money for 2025 Championship</h4>
+                    <div class="press-date">June 22, 2025</div>
+                    <div class="press-excerpt">
+                        <p>Naija5Fest has announced a significant increase in prize money for its 2025 championship. The grand prize for the year-end "Kings of 5's" championship has been increased to ₦5,000,000, up from ₦3,000,000 in 2024. Monthly qualifier prizes have also been increased to ₦2,000,000 per state.</p>
+                    </div>
+                    <a href="#" class="btn btn-sm btn-primary">Read Full Release</a>
+                </div>
+                
+                <h2>Media Coverage Guidelines</h2>
+                
+                <h3>Media Accreditation</h3>
+                <p>Journalists and media representatives wishing to cover Naija5Fest events must apply for media accreditation at least 7 days before the event. Accreditation provides:</p>
+                <ul>
+                    <li>Access to media areas at tournament venues</li>
+                    <li>Interview opportunities with players, coaches, and organizers</li>
+                    <li>Access to high-resolution photos and videos</li>
+                    <li>Press conference invitations</li>
+                </ul>
+                <p>To apply for accreditation, please email <a href="mailto:media@naija5fest.com.ng">media@naija5fest.com.ng</a> with your name, media outlet, position, and the specific event(s) you wish to cover.</p>
+                
+                <h3>Brand Guidelines</h3>
+                <p>When using Naija5Fest branding in your coverage, please adhere to the following guidelines:</p>
+                <ul>
+                    <li>Always use the correct spelling: "Naija5Fest" (one word, with the number 5)</li>
+                    <li>Do not alter, distort, or change the colors of the official logos</li>
+                    <li>Maintain clear space around the logo equal to the height of the "N" in the logo</li>
+                    <li>When mentioning sponsors, use their full and correct names as provided in our materials</li>
+                </ul>
+                
+                <h3>Interview Requests</h3>
+                <p>For interview requests with Naija5Fest organizers, players, or sponsors, please contact our media relations team at least 48 hours in advance. We will do our best to accommodate all reasonable requests based on availability.</p>
+                
+                <div class="download-section">
+                    <h3>Downloadable Resources</h3>
+                    
+                    <ul class="download-list">
+                        <li class="download-item">
+                            <div class="download-info">
+                                <div class="download-icon">
+                                    <i class="fas fa-file-pdf"></i>
+                                </div>
+                                <div>
+                                    <div class="download-name">Naija5Fest Media Kit (Complete)</div>
+                                    <div class="download-meta">PDF, 15.2 MB</div>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-sm btn-primary">Download</a>
+                        </li>
+                        
+                        <li class="download-item">
+                            <div class="download-info">
+                                <div class="download-icon">
+                                    <i class="fas fa-file-pdf"></i>
+                                </div>
+                                <div>
+                                    <div class="download-name">2025 Tournament Schedule</div>
+                                    <div class="download-meta">PDF, 2.4 MB</div>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-sm btn-primary">Download</a>
+                        </li>
+                        
+                        <li class="download-item">
+                            <div class="download-info">
+                                <div class="download-icon">
+                                    <i class="fas fa-file-pdf"></i>
+                                </div>
+                                <div>
+                                    <div class="download-name">Sponsor Information Sheet</div>
+                                    <div class="download-meta">PDF, 3.8 MB</div>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-sm btn-primary">Download</a>
+                        </li>
+                        
+                        <li class="download-item">
+                            <div class="download-info">
+                                <div class="download-icon">
+                                    <i class="fas fa-file-archive"></i>
+                                </div>
+                                <div>
+                                    <div class="download-name">Logo Package (All Formats)</div>
+                                    <div class="download-meta">ZIP, 24.6 MB</div>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-sm btn-primary">Download</a>
+                        </li>
+                        
+                        <li class="download-item">
+                            <div class="download-info">
+                                <div class="download-icon">
+                                    <i class="fas fa-file-image"></i>
+                                </div>
+                                <div>
+                                    <div class="download-name">High-Resolution Photo Pack</div>
+                                    <div class="download-meta">ZIP, 45.2 MB</div>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-sm btn-primary">Download</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <p class="content-date">Last Updated: August 18, 2025</p>
+                
+                <a href="index.html" class="back-to-home"><i class="fas fa-arrow-left"></i> Back to Home</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-about">
+                    <div class="footer-logo">Naija<span>5</span>Fest</div>
+                    <p>Naija5Fest is Nigeria's premier football tournament combining grassroots competition with sponsor integration, creating opportunities for young talents across the nation.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3 class="footer-heading">Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#tournament">Tournament</a></li>
+                        <li><a href="index.html#sponsors">Sponsors</a></li>
+                        <li><a href="index.html#registration">Register</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3 class="footer-heading">Resources</h3>
+                    <ul>
+                        <li><a href="tournament-rules.html">Tournament Rules</a></li>
+                        <li><a href="player-eligibility.html">Player Eligibility</a></li>
+                        <li><a href="sponsor-packages.html">Sponsor Packages</a></li>
+                        <li><a href="media-kit.html">Media Kit</a></li>
+                        <li><a href="faqs.html">FAQs</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3 class="footer-heading">Legal</h3>
+                    <ul>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-conditions.html">Terms & Conditions</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-newsletter">
+                    <h3 class="footer-heading">Newsletter</h3>
+                    <p>Subscribe to our newsletter for the latest updates and offers.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit" class="btn btn-accent">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Naija5Fest. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
