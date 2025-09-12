@@ -326,7 +326,7 @@ nav ul li a:hover::after {
 .map-container {
   position: relative;
   width: 100%;
-  height: 600px;
+  height: 400px;
   margin: 2rem 0;
 }
 
